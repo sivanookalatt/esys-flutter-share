@@ -32,10 +32,9 @@ public class SwiftEsysFlutterSharePlugin: NSObject, FlutterPlugin {
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
         
         // present the view controller
-        let controller = UIApplication.shared.keyWindow!.rootViewController as! FlutterViewController
-        activityViewController.popoverPresentationController?.sourceView = controller.view
-        
-        controller.show(activityViewController, sender: self)
+        let navController = UIApplication.shared.keyWindow!.rootViewController as! UINavigationController
+        activityViewController.popoverPresentationController?.sourceView = navController.view
+        navController.present(activityViewController, animated: false)
     }
     
     func file(arguments:Any?) -> Void {
@@ -61,10 +60,9 @@ public class SwiftEsysFlutterSharePlugin: NSObject, FlutterPlugin {
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         
         // present the view controller
-        let controller = UIApplication.shared.keyWindow!.rootViewController as! FlutterViewController
-        activityViewController.popoverPresentationController?.sourceView = controller.view
-        
-        controller.show(activityViewController, sender: self)
+        let navController = UIApplication.shared.keyWindow!.rootViewController as! UINavigationController
+        activityViewController.popoverPresentationController?.sourceView = navController.view
+        navController.present(activityViewController, animated: false)
     }
     
     func files(arguments:Any?) -> Void {
@@ -93,9 +91,8 @@ public class SwiftEsysFlutterSharePlugin: NSObject, FlutterPlugin {
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         
         // present the view controller
-        let controller = UIApplication.shared.keyWindow!.rootViewController as! FlutterViewController
-        activityViewController.popoverPresentationController?.sourceView = controller.view
-        
-        controller.show(activityViewController, sender: self)
+        let navController = UIApplication.shared.keyWindow!.rootViewController as! UINavigationController
+        activityViewController.popoverPresentationController?.sourceView = navController.view
+        navController.present(activityViewController, animated: false)
     }
 }
